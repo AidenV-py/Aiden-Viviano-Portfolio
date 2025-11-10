@@ -1,4 +1,4 @@
-<html>
+z<html>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="UTF-8">
     <style>
@@ -23,21 +23,7 @@
             background-position: 0% 50%;
         }
         }
-            .responsive-text {
-  font-size: 16px;
-}
-
-@media (min-width: 768px) {
-  .responsive-text {
-    font-size: 24px; /* tablets and up */
-  }
-}
-
-@media (min-width: 1200px) {
-  .responsive-text {
-    font-size: 32px; /* large desktops */
-  }
-}
+            
         .content {
         text-align: center;
         z-index: 1;
@@ -46,6 +32,8 @@
             color: #ffffff;
             font-size: 2.5rem;
             text-align: center;
+            font-size: clamp(16px, 4vw, 32px);
+
         }
         .intro {
             max-width: 1000px;
@@ -69,13 +57,7 @@
             line-height: 1.7;
             
         }
-                      h1 {
-              font-size: clamp(24px, 6vw, 48px);
-            }
-            
-            h2 {
-              font-size: clamp(16px, 4vw, 32px);
-            }
+                     
 
         @keyframes fadeInUp {
             to {
