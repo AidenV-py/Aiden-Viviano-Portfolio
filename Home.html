@@ -1,4 +1,4 @@
-z<html>
+<html>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="UTF-8">
     <style>
@@ -23,7 +23,7 @@ z<html>
             background-position: 0% 50%;
         }
         }
-            
+
         .content {
         text-align: center;
         z-index: 1;
@@ -32,13 +32,11 @@ z<html>
             color: #ffffff;
             font-size: 2.5rem;
             text-align: center;
-            font-size: clamp(16px, 4vw, 32px);
-
         }
         .intro {
             max-width: 1000px;
             margin: 60px auto;
-           padding: 40px;
+            padding: 40px;
             background: #1568a0;
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -46,18 +44,15 @@ z<html>
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 1s ease-out forwards;
-              font-size: clamp(14px, 3vw, 20px);
-              margin: 20px;
-              padding: 20px;
+            font-size: 2rem;
             word-spacing: .5rem;
         }
 
         .intro p {
-            font-size: 1rem;
+            font-size: 1.5rem;
             line-height: 1.7;
             
         }
-                     
 
         @keyframes fadeInUp {
             to {
@@ -79,9 +74,6 @@ z<html>
             text-align: center;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
-          .responsive-text {
-  font-size: clamp(14px, 2vw, 36px);
-}
 
         .nav-links {
             font-weight: bold;
@@ -127,13 +119,14 @@ z<html>
         }
 
       img {
-       width: clamp(120px, 40%, 300px); /* min 120px, scales up to 300px or 40% of screen */
-  height: auto;
-  border-radius: 50%;
-  display: block;
-  margin: 20px auto;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
+        margin : auto;
+    width:40%;
+    height: 40%;
+    object-fit: cover;          
+    object-position: center;
+    display: block;
+    border-radius: 50% / 50%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   }
 
 
@@ -158,10 +151,5 @@ z<html>
 
     </body>
 </html>
-
-
-
-
-
 
 
