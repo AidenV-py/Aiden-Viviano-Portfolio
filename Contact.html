@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aiden Viviano/Resume.com</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Cambria", "Cochin", Georgia, Times, 'Times New Roman', serif;
+  background: linear-gradient(-45deg, #d0e7ff, #a1c4fd, #c2e9fb, #b2ebf2);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #222;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1, h2, h3 {
+  color: #1a237e;
+  text-align: center;
+}
+
+/* === Contact Section === */
+.contact-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  background: #ffffffdd;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-header {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0d47a1;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.contact-box {
+  flex: 1 1 45%;
+  background-color: #e3f2fd;
+  padding: 25px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border-left: 5px solid transparent;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.contact-box:hover {
+  transform: translateY(-6px);
+  border-left: 5px solid #29b6f6;
+  background-color: #ffffff;
+}
+
+.contact-box i {
+  font-size: 1.8rem;
+  color: #29b6f6;
+  margin-bottom: 10px;
+}
+
+.contact-box h3 {
+  margin: 10px 0;
+  color: #0d47a1;
+  font-size: 1.4rem;
+}
+
+.contact-box p {
+  margin: 5px 0;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .contact-box {
+    flex: 1 1 100%;
+  }
+}
+
+/* === Navbar === */
+        .navbar {
+            background: linear-gradient(-45deg, #303030,  #3315b6, #000000);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: white;
+            padding: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .nav-links {
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            word-spacing: 40px;
+
+        }
+
+        .nav-links li {
+        display: inline-block;
+        margin: 0 20px;
+        }
+
+        .nav-links a {
+        position: relative;
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 5px 0;
+        transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0%;
+        height: 2px;
+        background-color: #00ffff;
+        transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+        color: #00ffff;
+        }
+
+        .nav-links a:hover::after {
+        width: 100%;
+        }
+
+
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class ="nav-links">
+        <a href="Home.html"> Home</a>
+        <a href="Education.html">Education/Experience</a>
+        <a href="Contact.html"> Contact</a> 
+        </ul>
+    </nav>
+
+  <div class="contact-container">
+    <div class="contact-header">
+      Get In Touch With Me!
+    </div>
+    <div class="contact-grid">
+
+      <div class="contact-box">
+        <i class="fas fa-phone"></i>
+        <h3>Phone Number</h3>
+        <p>Email Me For Phone Number </p>
+      </div>
+      <div class="contact-box">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p>aidenviviano@gmail.com</p>
+      </div>
+
+      <div class="contact-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Location</h3>
+        <p>48317 Shelby twp. MI</p>
+      </div>
+
+      <div class="contact-box">
+        <i class="fas fa-clock"></i>
+        <h3>Availability Hours</h3>
+        <p>Monday To Friday</p>
+        <p>11:00 AM To 05:30 PM</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

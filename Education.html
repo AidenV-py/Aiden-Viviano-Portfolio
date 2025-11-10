@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aiden Viviano/Resume.com</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1662ad, #57cfdf);
+      color: #333;
+    }
+
+    .navbar {
+        background: linear-gradient(-45deg, #303030,  #3315b6, #000000);
+        background-size: 400% 400%;
+        animation: gradientBG 10s ease infinite;
+        color: white;
+        padding: 20px;
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+    .nav-links {
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        word-spacing: 40px;
+        }
+
+        .nav-links li {
+        display: inline-block;
+        margin: 0 20px;
+        }
+
+        .nav-links a {
+        position: relative;
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 5px 0;
+        transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0%;
+        height: 2px;
+        background-color: #00ffff;
+        transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+        color: #00ffff;
+        }
+
+        .nav-links a:hover::after {
+        width: 100%;
+        }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    h2, h3 {
+      color: #1e3c72;
+      margin-top: 0;
+      font-size: 2rem;
+    }
+    li{
+        line-height: 1.6;
+        color: #333;
+        font-size: 1.5rem;
+    }
+    p{
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .projects a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .projects a:hover {
+      text-decoration: underline;
+    }
+
+
+    @media (max-width: 600px) {
+      nav.navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .container {
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul class="nav-links">
+        <a href="Home.html"> Home</a>
+        <a href="Education.html">Education/Experience</a>
+        <a href="Contact.html"> Contact</a> 
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>My Professional Resume</h1>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Web Development</li>
+        <li>Web Design</li>
+        <li>MS Office Certified</li>
+        <li>Problem Solving</li>
+        <li> Software Design</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Languages</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>Java Script</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <p>
+Through online courses, I developed strong self-discipline and adaptability by completing complex assignments independently in a remote setting. I am equally comfortable working in an office environment, whether independently or as part of a team.      </p>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <p>I am currently studying Computer Science at Oakland University for a Bacholers degree, building a strong foundation in software development and computational thinking. In addition, I have hands-on experience in full-stack web development, allowing me to create dynamic, user-friendly websites from front end to back end.</p>
+    </div>
+
+    <div class="section">
+      <h2>Previous Projects</h2>
+      <ul class="projects">
+        <li><a href="ExampleWeb.html" target = _blank>Simple_Example_Web</a></li>
+        <li><a href="ComplexWebEx.html" target = _blank>Complex_Web_Example</a></li>
+        <li><a href="WordleInfinite.html" target = _blank>Wordle_Infinite</a></li>
+        <li><a href="FinanceApp.html" target = _blank>Financal_App</a></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
