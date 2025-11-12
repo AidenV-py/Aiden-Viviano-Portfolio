@@ -1,155 +1,158 @@
-<html>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta charset="UTF-8">
-    <style>
-        body {
-        margin: 0;
-        height: 100vh;
-        font-family: "Cambria", "Cochin", Georgia, Times, 'Times New Roman', serif;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aiden Viviano | Resume</title>
+  <meta name="view-transition" content="same-origin" />
+  <style>
+    /* GENERAL STYLING */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Cambria", "Cochin", Georgia, Times, 'Times New Roman', serif;
       background: linear-gradient(135deg, #1662ad, #57cfdf);
-        background-size: 400% 400%;
-        animation: gradientBG 10s ease infinite;
-        color: white;
-        }
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        @keyframes gradientBG {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-        }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-        .content {
-        text-align: center;
-        z-index: 1;
-        }
-        h1,h2,h3 {
-            color: #ffffff;
-            font-size: 2.5rem;
-            text-align: center;
-        }
-        .intro {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 40px;
-            background: #1568a0;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards;
-            font-size: 2rem;
-            word-spacing: .5rem;
-        }
+    /* NAVBAR */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(-45deg, #303030, #3315b6, #000000);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    }
 
-        .intro p {
-            font-size: 1.5rem;
-            line-height: 1.7;
-            
-        }
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      margin: 0 20px;
+      display: inline-block;
+      position: relative;
+      transition: color 0.3s ease;
+      font-size: 1.1rem;
+    }
 
-        strong {
-            color: #0077cc;
-        }
-        .navbar {
-            background: linear-gradient(-45deg, #303030,  #3315b6, #000000);
-            background-size: 400% 400%;
-            animation: gradientBG 10s ease infinite;
-            color: white;
-            padding: 20px;
-            font-size: 1.5rem;
-            text-align: center;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background-color: #00ffff;
+      transition: width 0.3s ease;
+    }
 
-        .nav-links {
-            font-weight: bold;
-            color: rgb(255, 255, 255);
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 1.5rem;
-            word-spacing: 40px;
+    .nav-links a:hover {
+      color: #00ffff;
+    }
 
-        }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
-        .nav-links li {
-        display: inline-block;
-        margin: 0 20px;
-        }
+    /* HEADINGS */
+    h1, h2 {
+      text-align: center;
+      margin: 20px 10px;
+    }
 
-        .nav-links a {
-        position: relative;
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-        padding: 5px 0;
-        transition: color 0.3s ease;
-        }
+    h1 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+    }
 
-        .nav-links a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -5px;
-        width: 0%;
-        height: 2px;
-        background-color: #00ffff;
-        transition: width 0.3s ease;
-        }
+    h2 {
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+      font-weight: normal;
+    }
 
-        .nav-links a:hover {
-        color: #00ffff;
-        }
-
-        .nav-links a:hover::after {
-        width: 100%;
-        }
-
-      img {
-        margin : auto;
-    width:40%;
-    height: 40%;
-    object-fit: cover;          
-    object-position: center;
-    display: block;
-    border-radius: 50% / 50%;
+    /* IMAGE */
+    img {
+      width: 250px;
+      max-width: 70%;
+      height: auto;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      margin: 30px auto;
       box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  }
+    }
 
+    /* INTRO SECTION */
+    .intro {
+      max-width: 900px;
+      width: 90%;
+      margin: 30px auto 60px auto;
+      padding: 30px;
+      background: rgba(21, 104, 160, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeInUp 1s ease-out forwards;
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      line-height: 1.6;
+    }
 
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-    </style>
-    <head>
-        <title>Aiden Viviano/Resume.com</title>
-        <meta name="view-transition" content="same-origin">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    <body>
-    <nav class="navbar">
-            <ul class ="nav-links">
-                <a href="Home.html"> Home</a>
-                <a href="Education.html">Education/Experience</a>
-                <a href="Contact.html"> Contact</a> 
-            </ul>
-        </nav>
-        <h1>Hi, I'm Aiden Viviano </h1>
-        <h2>Welcome to my personal site — feel free to explore to learn more about my background, education, and how to get in touch!</h2>
-        <img src="https://cdn.csspicker.dev/csspicker-input-image/f66473f4-c564-4f06-8e2b-3ec6c3ac3a78.webp" alt="That's me!" >
-    <p class ="intro">Welcome to my professional portfolio. This site serves as a central hub to showcase my background, qualifications, and experience. You’ll find detailed information about my education and work history under the Experience/Education section. If you’d like to connect or request additional information, please feel free to reach out via the Contact page.</p>
+    /* RESPONSIVE ADJUSTMENTS */
+    @media (max-width: 768px) {
+      .nav-links a {
+        display: block;
+        margin: 10px 0;
+      }
+      .navbar {
+        padding: 10px;
+      }
+      .intro {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="Education.html">Education / Experience</a>
+      <a href="Contact.html">Contact</a>
+    </ul>
+  </nav>
 
-    </body>
+  <h1>Hi, I'm Aiden Viviano</h1>
+  <h2>Welcome to my personal site — feel free to explore to learn more about my background, education, and how to get in touch!</h2>
+
+  <img src="https://cdn.csspicker.dev/csspicker-input-image/f66473f4-c564-4f06-8e2b-3ec6c3ac3a78.webp" alt="That's me!">
+
+  <p class="intro">
+    Welcome to my professional portfolio. This site serves as a central hub to showcase my background, qualifications, and experience. You’ll find detailed information about my education and work history under the Experience/Education section. If you’d like to connect or request additional information, please feel free to reach out via the Contact page.
+  </p>
+</body>
 </html>
-
-
